@@ -1,0 +1,269 @@
+.infomation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &_image{
+        position: absolute;
+        left:0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+
+    }
+    &_content{
+        display: flex;
+        gap:5rem;
+        span{
+            color:#e83d45;
+            font-size: 1.6rem;
+        }
+    }
+
+    &_form{
+        background: #fff;
+        width: 60rem;
+        padding:2rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        box-shadow: 0.1rem 0.2rem 1rem rgba(255,255,255,0.7);
+
+        &_winner{display: none;}
+        h1{
+            font-size: 2.2rem;
+            color: #222;
+        }
+
+        &_group{
+            display: flex;
+            flex-direction: column;
+            gap:1rem;
+
+            label{
+                font-size: 1.6rem;
+                color:gray
+            }
+
+            input{
+                padding:1rem;
+                font-size: 1.7rem;
+                color:#222;
+                border-radius: 1rem;
+                outline: none;
+                border:0.1rem solid gray;
+            }
+
+            &_sex{
+                
+                display: flex;
+                gap:2rem;
+                align-items: center;
+                label{
+                    font-size: 1.6rem;
+                    color:gray
+                }
+    
+                select{
+                    padding:0.5rem 2rem;
+                    border:0.1rem solid gray;
+                    border-radius: 0.5rem;
+                    font-size: 1.6rem;
+                    outline: none;
+                }
+            }
+        }
+
+        button{
+            padding:1rem;
+            font-size: 1.7rem;
+            background: #fb8e42;
+            border:0.1rem solid gray;
+            color:#fff;
+            border-radius:1rem;
+            cursor: pointer;
+            &.disable{
+                pointer-events:none;
+                &:hover{
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+
+    &_winner_sm{
+        background: #fff;
+        padding:2rem;
+        border-radius: 1rem;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0.1rem 0.2rem 1rem rgba(255,255,255,0.7);
+        h1{
+            color:#222
+        }
+
+        button{
+            padding:1rem 3rem;
+            border-radius: 1rem;
+            border:0.1rem solid gray;
+            background:#fb8e42;
+            color:#fff;
+            cursor: pointer;
+        }
+    }
+
+    &_winner{
+        background: #fff;
+        padding:2rem;
+        border-radius: 1rem;
+        width: 50rem;
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        box-shadow: 0.1rem 0.2rem 1rem rgba(255,255,255,0.7);
+        height: max-content;
+        h1{
+            color:#222
+        }
+
+        &_tags{
+            display: flex;
+            align-items: center;
+            gap:2rem;
+            background-color: #fb8e42;
+            padding:1rem;
+            p{
+                flex:1;
+                font-size: 1.7rem;
+                color:#fff;
+                text-align: center;
+
+                &:first-child{
+                    flex:unset;
+                    width: 5rem;
+                }
+
+                &:nth-child(2){
+                    flex:unset;
+                    width: 15rem;
+                }
+            }
+        }
+
+        &_user{
+            display: flex;
+            align-items: center;
+            gap:2rem;
+            padding:1rem;
+            p{
+                flex:1;
+                font-size: 1.7rem;
+                color:#222;
+                text-align: center;
+
+                &:first-child{
+                    flex:unset;
+                    width: 5rem;
+                }
+
+                &:nth-child(2){
+                    flex:unset;
+                    width: 15rem;
+                }
+            }
+        }
+
+        &_all{
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.6rem;
+            color:#fb8e42;
+
+        }
+    }
+
+
+}
+
+@media (max-width:1030px){
+
+    .infomation_content{
+        flex-direction: column-reverse;
+        gap:2rem;
+    }
+
+    .infomation_winner{
+        display: none;
+    }
+
+    .infomation_winner_sm{
+        display: flex;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .infomation_form {
+        width: 50rem;
+    }
+
+}
+
+@media (max-width:500px){
+
+    .infomation_form {
+        width: 40rem;
+    }
+
+}
+
+@media (max-width:400px){
+
+    .infomation{
+        display: block;
+        
+    }
+    .infomation_content{
+        display: unset;
+    }
+
+    .infomation_form {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+
+        &_winner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:1rem 0.5rem;
+            background: #fb8e42;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+
+            h2{
+                font-size: 1.6rem;
+                color:#fff;
+                font-weight: 400;
+            }
+
+            
+
+            button{
+                color:#fff;
+                border: none;
+                font-size: 1.6rem;
+
+            }
+        }
+    }
+
+    .infomation_winner_sm{
+        display: none;
+    }
+}

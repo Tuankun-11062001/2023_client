@@ -1,0 +1,146 @@
+.welcome{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &_modal{
+        position: fixed;
+        left:0;
+        right: 0;
+        bottom: 0;
+        top:0;
+        &_game{
+            position: absolute;
+            bottom: 10rem;
+            right:5rem;
+            background: white;
+            padding:2rem;
+            border-radius: 1rem;
+            display: flex;
+            gap:2rem;
+            align-items: center;
+            box-shadow: 0.1rem 0.2rem 1rem rgba(255,255,255,0.6);
+    
+            &_image{
+                width: 5rem;
+                height: 5rem;
+            }
+    
+            p{
+                font-size: 1.7rem;
+                color:#333;
+            }
+    
+            &_buttons{
+                display: flex;
+                gap:2rem;
+                button{
+                    width: 3rem;
+                    height: 3rem;
+                    background:transparent;
+                    border-radius: 50%;
+                    border:0.1rem solid gray;
+                    transition: 0.3s ease;
+                    cursor: pointer;
+                    svg{
+                        width: 2rem;
+                        height: 2rem;
+                        transition: 0.3s ease;
+                    }
+                    
+                    &:first-child:hover{
+                        background: #62c050;
+                        svg{
+                            color:#fff
+                        }
+                    }
+                    &:last-child:hover{
+                        background: #e83d45;
+                        svg{
+                            color:#fff
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// reponsive
+
+// w:1024px
+
+@media (max-width:1030px){
+    .welcome{
+        &_video{
+            object-fit: contain;
+        }
+
+        &_modal{
+            &_game{
+                right: 4rem;    
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+
+// w:768px
+
+@media (max-width:780px){
+    .welcome{
+        &_video{
+            object-fit: contain;
+        }
+        &_modal{
+            &_game{
+                bottom: 5rem;
+            }
+        }
+    }
+}
+
+// w:430px
+
+@media (max-width:430px){
+    .welcome{
+        &_modal{
+            &_game{
+                width: 35rem;
+                bottom: 3rem;
+                right: 2rem;
+                p{
+                    font-size: 1.6rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// w:375px
+
+@media (max-width:380px){
+    .welcome{
+        &_modal{
+            &_game{
+                right: 0;
+                left:0;
+                width: 100%;
+                p{
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

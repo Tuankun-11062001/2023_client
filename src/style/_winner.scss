@@ -1,0 +1,286 @@
+.winner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &_img{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    &_context{
+        width: 100rem;
+        background: #fff;
+        padding:2rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        box-shadow: 0.1rem 0.2rem 1rem rgba(255,255,255,0.6);
+        z-index: 2;
+        h1{
+            text-align: center;
+            font-size: 2rem;
+            color:#fb8e42;
+
+        }
+
+        &_tags{
+            display: flex;
+            align-items: center;
+            background: #fb8e42;
+            padding:1rem;
+            gap:2rem;
+            p{
+                flex:1;
+                font-size: 1.7rem;
+                color:#fff;
+                text-align: center;
+
+                &:first-child{
+                    flex:unset;
+                    width:5rem;
+                }
+
+                &:nth-child(2){
+                    flex:unset;
+                    width:20rem;
+                }
+
+                &:nth-child(3){
+                    flex:unset;
+                    width:30rem;
+                    
+                }
+                &:nth-child(4){
+                    flex:unset;
+                    width:15rem;
+                    
+                }
+            }
+        }
+        &_list{
+            display: flex;
+            flex-direction: column;
+            gap:1rem;
+            height: 50rem;
+            overflow: auto;
+
+            button{
+                margin-top: 2rem;
+                width: max-content;
+                padding:1rem 3rem;
+                background: #fb8e42;
+                color:#fff;
+                border-radius: 0.5rem;
+                border:0.1rem solid gray;
+                align-self: center;
+            }
+        }
+        &_item{
+            display: flex;
+            align-items: center;
+            padding:1rem;
+            gap:2rem;
+            p{
+                flex:1;
+                font-size: 1.7rem;
+                color:#222;
+                text-align: center;       
+                overflow: hidden;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;     
+
+                &:first-child{
+                    flex:unset;
+                    width:5rem;
+                }
+
+                &:nth-child(2){
+                    flex:unset;
+                    width:20rem;
+                }
+
+                &:nth-child(3){
+                    flex:unset;
+                    width:30rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap:0.5rem;
+                    span {
+                        overflow: hidden;
+                        display: -webkit-box;
+                        text-overflow: ellipsis;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                    }
+                    button{
+                        margin: 0;
+                        padding: 0.5rem 1rem;
+                        color:#fff;
+                        background: #fb8e42;
+                        border-radius: 0.5rem;
+                        font-size: 1.5rem;
+                        border:0.1rem solid gray;
+                        cursor: pointer;
+                    }
+                }
+
+                &:nth-child(4){
+                    flex:unset;
+                    width:15rem;
+                }
+            }
+        }
+
+        &_item_sm{
+            display: none;
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .nav_container{
+        a,h1{
+            color:#222;
+            border-color: #222;
+        }
+    }
+    .winner_context {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+
+        // face
+        &_tags p:nth-child(3) {
+            width: 20rem;
+        }
+        &_item p:nth-child(3) {
+            width: 20rem;
+        }
+
+        // sex
+        &_tags p:nth-child(4) {
+            width: 10rem;
+        }
+        &_item p:nth-child(4) {
+            width: 10rem;
+        }
+    }
+
+}
+
+@media (max-width:800px) {
+    .winner_context {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+
+        // first child
+        &_tags p:first-child {
+            width: 2rem;
+        }
+        &_item p:first-child {
+            width: 2rem;
+        }
+
+        // name
+        &_tags p:nth-child(2) {
+            width: 15rem;
+        }
+        &_item p:nth-child(2) {
+            width: 15rem;
+        }
+
+        // face
+        &_tags p:nth-child(3) {
+            width: 20rem;
+        }
+        &_item p:nth-child(3) {
+            width: 20rem;
+        }
+
+        // sex
+        &_tags p:nth-child(4) {
+            width: 10rem;
+        }
+        &_item p:nth-child(4) {
+            width: 10rem;
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .winner_context_tags,.winner_context_item {
+        display: none;
+    }
+
+    .winner_context_item_sm{
+        display: block;
+        background: #fb8e42;
+        color:#fff;
+        padding:2rem;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        margin-bottom: 2rem;
+        &_group{
+            display: flex;
+            align-items: center;
+            font-size: 1.7rem;
+            gap:1rem;
+            p{
+                &:first-child{
+                    width: 10rem;
+                    font-weight: 500;
+                }
+                &:last-child{
+                    flex:1
+                }
+            }
+
+            &_face{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span{
+                    width: 12rem;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                }
+                button{
+                    margin: 0;
+                    border-color: #fff;
+                    padding:0.5rem 2rem;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width:400px) {
+
+    .winner_context_item_sm{
+        &_group{
+            font-size: 1.5rem;
+            &_face{
+                span{
+                    width: 6rem;
+                }
+            }
+        }
+
+    }
+}

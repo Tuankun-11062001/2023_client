@@ -1,0 +1,47 @@
+
+  .game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &_img{
+      position: absolute;
+      left:0;
+      right: 0;
+      bottom: 0;
+      top:0;
+    }
+    &_content{
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      flex-direction: column;
+      padding-block: 1rem;
+      overflow: hidden;
+      z-index: 5;
+      &_spin{
+        padding:1rem 4rem;
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        background: transparent;
+        border-radius:20rem;
+        border:0.1rem solid #fff;
+        color:#fff
+      }
+    }
+  }
+
+  // reponsive
+
+@media (max-width:430px){
+  .game{
+    &_content{
+      &_spin{
+        background: #62c050;
+        color:#fff
+      }
+    }
+  }
+}

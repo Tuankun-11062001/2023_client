@@ -1,0 +1,61 @@
+.nav{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.nav_container{
+    position: fixed;
+    top:3rem;
+    right: 0;
+    left: 0;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    z-index: 5;
+    h1{
+        padding-bottom: 1rem;
+        border-bottom: 0.1rem solid white;
+        flex:1;
+        color:white;
+        font-size: 2rem;
+    }
+
+    &_logo{
+        a{
+            font-size: 3rem;
+            color:white;
+            text-decoration: none;
+            font-weight: 500;
+
+        }
+    }
+}
+
+@media (max-width:800px){
+    .nav_container{
+        h1{
+            font-size: 1.7rem;
+            font-weight: 400;
+        }
+    }
+}
+
+@media (max-width:400px){
+    .nav_container{
+        a{
+            color:gray;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        h1{
+            font-size: 1.7rem;
+            font-weight: 400;
+            color:gray;
+            border-color: #333;
+        }
+    }
+}
