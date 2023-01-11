@@ -72,6 +72,7 @@ export default function FireWork() {
     // resize canvas
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
+
     canvas.addEventListener("resize", () => {
       canvas.height = window.innerHeight;
       canvas.width = window.innerWidth;

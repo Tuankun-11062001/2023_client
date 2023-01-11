@@ -158,6 +158,8 @@
         flex-direction: column;
         gap: 2.5rem;
         position: relative;
+        margin-inline: 2rem;
+        box-shadow: 0.2rem 0.1rem 1rem rgba(255, 255, 255, 0.6);
 
         &_image {
             width: 10rem;
@@ -216,6 +218,9 @@
 }
 
 @media (max-width:550px) {
+    .nav{
+
+    }
     .prize_content {
         width: 40rem;
         padding-inline: 1rem;
@@ -269,7 +274,7 @@
         width: 60rem;
         box-shadow: 0.1rem 0.2rem 1rem rgba(255, 255, 255, 0.6);
         position: relative;
-
+        margin-inline: 2rem;
         div {
             width: 20rem;
             height: 20rem;
@@ -359,19 +364,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-z-index: 6;
+    z-index: 6;
     &_contain {
         background: #fff;
         padding: 2rem;
         border-radius: 1rem;
         box-shadow: 0.1rem 0.2rem 1rem rgba(255, 255, 255, 0.6);
+        margin-inline: 2rem;
 
         &_funny {
             display: flex;
             flex-direction: column;
             gap: 2rem;
             align-items: center;
-
+            
             img {
                 width: 40rem;
                 height: 30rem;
@@ -422,9 +428,10 @@ z-index: 6;
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:500px) {
     .copy_contain {
-        margin-inline: 2rem;
+        width: 35rem;
+
     }
 
     .copy_contain_funny img {

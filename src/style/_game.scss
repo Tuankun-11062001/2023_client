@@ -12,6 +12,9 @@
       right: 0;
       bottom: 0;
       top:0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     &_content{
       display: flex;
@@ -34,6 +37,22 @@
   }
 
   // reponsive
+
+@media (max-width:500px){
+  .nav_container{
+    h1,a{
+      color:#fff;
+    }
+  }
+  .game{
+    &_content{
+      &_spin{
+        background: #62c050;
+        color:#fff
+      }
+    }
+  }
+}
 
 @media (max-width:430px){
   .game{

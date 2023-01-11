@@ -55,8 +55,15 @@
 
 
 .fireWork{
+    height: 100%;
+    height: 100%;
     overflow: hidden;
-    height: 100vh;
+    canvas{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
     &_text{
         position: absolute;
         left:50%;
@@ -83,9 +90,6 @@
 
 @media (max-width:500px){
     .fireWork{
-        h2{
-            
-        }
         h1{
             font-size: 10rem;
         }

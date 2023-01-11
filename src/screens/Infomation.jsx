@@ -237,7 +237,7 @@ export default function Infomation() {
         >
           {/* context */}
 
-          <h1>Danh sách winner</h1>
+          <h1>Danh sách trúng thưởng</h1>
           <button onClick={seePrize}>Xem</button>
         </motion.div>
 
