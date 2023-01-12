@@ -196,15 +196,15 @@ export default function FireWork() {
 
   setTimeout(() => {
     setShowModalGame(true);
-  }, 60000);
+  }, 5000);
 
   setTimeout(() => {
     setShowModalGame(true);
-  }, 120000);
+  }, 15000);
 
   setTimeout(() => {
     setShowModalGame(true);
-  }, 180000);
+  }, 40000);
 
   // modal box small showing when watching video
 

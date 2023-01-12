@@ -266,7 +266,7 @@ export default function Infomation() {
           {dataPrize
             .filter((item, index) => index < 5)
             .map((item, index) => (
-              <div className="infomation_winner_user">
+              <div className="infomation_winner_user" key={item.id}>
                 <p>{index + 1}</p>
                 <p>{item.name}</p>
                 <p>{item.prize}</p>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import bgImage from "../assets/image/bg.png";
 // import WheelComponent from "react-wheel-of-prizes";
@@ -34,6 +35,7 @@ const containerMotion = {
     opacity: 1,
     transition: {
       delay: 0.5,
+      when: "beforeChildren",
     },
   },
 };
@@ -54,7 +56,6 @@ export default function Game() {
       style: {
         backgroundColor: "#62c050",
         textColor: "white",
-        fontFamily: "'Work Sans', sans-serif;",
       },
     },
     {
@@ -187,7 +188,7 @@ export default function Game() {
           className="game_content_spin"
           onClick={handleSpinClick}
         >
-          SPIN
+          Quay thưởng
         </motion.button>
       </div>
 

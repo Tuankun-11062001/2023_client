@@ -49,7 +49,6 @@ export default function Winners() {
   const [funnyModal, setFunnyModal] = useState(false);
   const [dataUser, setDataUser] = useState([]);
   const [page, setPage] = useState(2);
-  const [buttonText, setButtonText] = useState("Xem thêm");
 
   // call api get all prize
 

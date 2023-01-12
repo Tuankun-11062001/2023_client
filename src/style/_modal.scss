@@ -218,9 +218,6 @@
 }
 
 @media (max-width:550px) {
-    .nav{
-
-    }
     .prize_content {
         width: 40rem;
         padding-inline: 1rem;
@@ -436,5 +433,53 @@
 
     .copy_contain_funny img {
         width: 100%;
+    }
+}
+
+.modal_box_info{
+    position: fixed;
+    left:0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    &_context{
+        background: #fff;
+        box-shadow: 0.1rem 0.2rem 1rem rgba(255, 255, 255, 0.6);
+        padding:2rem;
+        margin-inline: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:2rem;
+        border-radius: 1rem;
+
+        h2{
+            font-size: 2.5rem;
+            color:#fb8e42;
+        }
+
+        p{
+            font-size: 1.7rem;
+            color:#222;
+        }
+
+        button{
+            padding:1rem 4rem;
+            color:#222;
+            background: transparent;
+            border:0.1rem solid #222;
+            border-radius: 1rem;
+            transition: 0.3s ease;
+            cursor: pointer;
+            &:hover{
+                background: #62c050;
+                color:#fff
+            }
+        }
     }
 }
