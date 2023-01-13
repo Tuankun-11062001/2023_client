@@ -68,6 +68,7 @@ export default function Infomation() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    setError("");
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -107,6 +108,12 @@ export default function Infomation() {
       return setError("Bạn điền thiếu thông tin.");
     }
 
+    // check field input facebook link
+
+    if (formData.linkFace.includes("https://www.facebook.com/") === false) {
+      return setError("link face của bạn không đúng rồi !");
+    }
+
     // call api with method post to send data to server
     await axios
       .post("https://2023-server.vercel.app/prize/create", data)
@@ -121,8 +128,10 @@ export default function Infomation() {
 
         // disable button submit and set deafult form
 
-        const buttonEl = document.querySelector(".infomation_form button");
+        const buttonEl = document.querySelector(".infomation_form_submit");
         buttonEl.classList.add("disable");
+
+        setError("");
 
         setShowThanks(true);
 
@@ -187,7 +196,7 @@ export default function Infomation() {
           <div className="infomation_form_group">
             <label>Link Face của bạn</label>
             <input
-              placeholder="ex: https://facebook.com/id...."
+              placeholder="ex: https://www.facebook.com/profile?id..."
               name="linkFace"
               onChange={handleChange}
               value={formData.linkFace}
@@ -207,13 +216,13 @@ export default function Infomation() {
           {/* form ground number momo */}
 
           <div className="infomation_form_group">
-            <label>Số tài khoản Nomo của bạn</label>
+            <label>Số tài khoản Momo của bạn</label>
             <input
               placeholder="123483924"
               type="tel"
               name="momo"
               onChange={handleChange}
-              value={formData.nomo}
+              value={formData.momo}
             />
           </div>
 
@@ -223,7 +232,9 @@ export default function Infomation() {
 
           {/* button submmit */}
 
-          <button onClick={submit}>Nhận thưởng</button>
+          <button onClick={submit} className="infomation_form_submit">
+            Nhận thưởng
+          </button>
         </motion.div>
 
         {/* component winner  in width medium. default display false*/}
